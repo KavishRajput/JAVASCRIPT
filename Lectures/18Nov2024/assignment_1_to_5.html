@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+</head>
+<body>
+    <h3>Divisible By 7 or Not</h3>
+    <input type="number" id="num1" placeholder="Enter Any number">
+    <p id="res1"></p>
+    <button onclick="divi()">Check</button>
+    <h3>Number +ve or -ve</h3>
+    <input type="number" id="num2" placeholder="Enter Any number">
+    <p id="res2"></p>
+    <button onclick="pos_neg()">Check</button>
+    <h3>Last Digit Number divisible By 3 Or not</h3>
+    <input type="number" id="num3" placeholder="Enter any number">
+    <p id="res3"></p>
+    <button onclick="las3()">Check</button>
+    <h3>Water Is Boiling Or Not</h3>
+    <input type="number" id="num4" placeholder="Enter Temperature in celcius">
+    <p id="res4"></p>
+    <button onclick="boil()">Check</button>
+    <h3>Lecture Percentage</h3>
+    <input type="number" id="num5" placeholder="Enter Number of Lecture Attend">
+    <input type="number" id="num6" placeholder="Enter Total number Of Lecture">
+    <p id="res5"></p>
+    <button onclick="lec()">Check</button>
+</body>
+</html>
+<script>
+
+
+    //Divisible by 7 Or not
+    function divi(){
+    var num1 = Number(document.getElementById("num1").value);
+    if(num1%7==0){
+        document.getElementById("res1").innerHTML=num1+"is Divisible by 7";
+    }
+    else{
+        document.getElementById("res1").innerHTML=num1+"is Not Divisible by 7";
+    }
+}
+
+
+    //Number +ve or -ve
+    function pos_neg(){
+    var num2 = Number(document.getElementById("num2").value);
+    if(num2>=0){
+        document.getElementById("res2").innerHTML=num2+" is a Positive Number";
+    }
+    else{
+        document.getElementById("res2").innerHTML=num2+" is a Negaitive Number";
+    }
+}
+
+
+    //Last Digit Number divisible By 3 Or not
+    function las3(){
+    var num3 = Number(document.getElementById("num3").value);
+    var Lastdig = num3%10;
+    if(Lastdig%3==0){
+        document.getElementById("res3").innerHTML="The Last Digit of "+num3+" is Divisible By 3";
+    }
+    else{
+        document.getElementById("res3").innerHTML="The Last Digit of "+num3+" is Not Divisible By 3";
+    }
+}
+
+
+    //Water Is Boiling Or Not
+    function boil(){
+    var num4 = Number(document.getElementById("num4").value);
+    if(num4>100){
+        document.getElementById("res4").innerHTML=" Water Is Boiling";
+    }
+    else{
+        document.getElementById("res4").innerHTML=" Water Is Not Boiling";
+    }
+}
+
+    //Lecture Percentage
+    function lec(){
+    var num5 = Number(document.getElementById("num5").value);
+    var num6 = Number(document.getElementById("num6").value);
+    lec_pert=num5/num6*100;
+    if(lec_pert>75){
+        document.getElementById("res5").innerHTML="You Are Allowed For Exam";
+    }
+    else{
+        document.getElementById("res5").innerHTML="You Are Not Allowed For Exam";
+    }
+}
+
+
+
+</script>
